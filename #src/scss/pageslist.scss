@@ -1,0 +1,49 @@
+.pageslist {
+	padding:100px 0;
+	font-family: 'Roboto', sans-serif;
+	color:#000;
+
+	&__col {
+		--gCols:1;
+		--gOf:2;
+	}
+
+	&__div {
+		--gCols:1!important;
+		--gOf:1!important;
+		height:1px;
+		background:rgba(#000,.1);
+	}
+
+	&-item {
+		flex-grow:1;
+		display:flex;
+		justify-content:space-between;
+		flex-wrap:wrap;
+		gap:10px 20px;
+		padding:10px 20px;
+		background:#fff;
+		box-shadow:0 0 5px rgba(#000,.2);
+		font-size:16px;
+		line-height:20px;
+
+		&__ttl {
+			font-weight:500;
+		}
+
+		&__file {
+			font-weight:300;
+			font-size:14px;
+			opacity:.5;
+			font-style:italic;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			padding-right:5px;
+		}
+
+		&:hover {
+			background-color:rgba(#000,.03);
+		}
+	}
+}

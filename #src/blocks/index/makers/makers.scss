@@ -1,0 +1,71 @@
+@import '../../../scss/_colors.scss';
+@import '../../../scss/_mixins.scss';
+
+.makers {
+	overflow:hidden;
+	background: linear-gradient(
+		43.09deg,
+		#17325A 9.72%,
+		#1C569B 59.95%
+	);
+	display:flex;
+	flex-direction: column;
+	justify-content:center;
+	min-height:425px;
+	
+	&__img {
+		position:absolute;
+		right:0;
+		top:0;
+		width:932px;
+	}
+
+	&__cont {
+		max-width:790px;
+	}
+
+	&__subtext {
+		font-weight:500;
+		letter-spacing: -0.01em;
+		
+		& b {
+			font-weight:800;
+			color:#FD7930;
+		}
+	}
+}
+
+@media only screen and (max-width: 1599px) {
+
+	.makers {
+		&__img {
+			right:auto;
+			left:50%;
+		}
+
+		&__cont {
+			max-width:640px;
+		}
+	}
+
+}
+
+@media only screen and (max-width: 1279px) {
+
+	.makers {
+		&__img {
+			left:calc(50% + 100px);
+		}
+	}
+
+}
+
+@media only screen and (max-width: 767px) {
+
+	.makers {
+		&__img {
+			display:none;
+		}
+	}
+
+}

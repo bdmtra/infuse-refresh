@@ -1,0 +1,114 @@
+@import '../../../scss/_colors.scss';
+@import '../../../scss/_mixins.scss';
+
+.inc5000 {
+	max-width:760px;
+	background:#fff;
+	color:#000;
+
+	&-popup {
+		background:rgba($color-orange,.7);
+	}
+
+	&__inner {
+		padding:40px 240px 40px 48px;
+		overflow:hidden;
+		position:relative;
+	}
+
+	&__img {
+		position:absolute;
+		top:0;
+		right:12px;
+		top:0;
+		width:296px;
+	}
+
+	&__ttl {
+		font-size:24px;
+		line-height:1.3em;
+		font-weight:700;
+		margin-bottom:30px;
+		position:relative;
+
+		& span {
+			color:#FF4713;
+		}
+	}
+
+	&__text {
+		font-size:20px;
+		line-height:1.3em;
+		position:relative;
+	}
+
+	& .popup__close {
+		position:absolute;
+		left:calc(100% + 17px);
+		top:0;
+		right:auto;
+
+		html.no-touch &:hover {
+			&:before {
+				background-color:$color-orange;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 900px) {
+
+	.inc5000 {
+		&__inner {
+			padding:50px 240px 50px 30px;
+		}
+
+		&__ttl {
+			font-size:19px;
+			line-height:23px;
+		}
+
+		&__text {
+			font-size:16px;
+			line-height:26px;
+		}
+		
+		& .popup__close {
+			left:auto;
+			right:0;
+			width:30px;
+			height:30px;
+
+			&:before {
+				width:14px;
+				height:14px;
+				background-color:#000;
+			}
+		}
+	}
+
+}
+
+@media only screen and (max-width: 700px) {
+
+	.inc5000 {
+		&__inner {
+			padding:50px 30px;
+		}
+
+		&__img {
+			display:none;
+		}
+	}
+
+}
+
+@media only screen and (max-width: 500px) {
+
+	.inc5000 {
+		&__inner {
+			padding:50px 20px;
+		}
+	}
+
+}

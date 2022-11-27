@@ -1,0 +1,78 @@
+.ui {
+	&-grid {
+		--gGap:20px;
+		--gGapB:var(--gGap);
+
+		display:flex;
+		flex-wrap:wrap;
+
+		gap:var(--gGapB) var(--gGap);
+
+		&--sb {
+			justify-content:space-between;
+		}
+
+		&--ac {
+			align-items:center;
+		}
+
+		&__col {
+			display:flex;
+			flex-direction: column;
+			width:calc((100% - (var(--gOf) - 1) * var(--gGap)) / var(--gOf) * var(--gCols) + (var(--gGap) * (var(--gCols) - 1)));
+
+			&--1 {
+				--gCols:1;
+				--gOf:1;
+			}
+
+			&--1of2,
+			&--2of4,
+			&--3of6,
+			&--4of8 {
+				--gCols:1;
+				--gOf:2;
+			}
+
+			&--1of3 {
+				--gCols:1;
+				--gOf:3;
+			}
+
+			&--2of3 {
+				--gCols:2;
+				--gOf:3;
+			}
+
+			&--1of4 {
+				--gCols:1;
+				--gOf:4;
+			}
+
+			&--3of4 {
+				--gCols:3;
+				--gOf:4;
+			}
+
+			&--1of5 {
+				--gCols:1;
+				--gOf:5;
+			}
+
+			&--2of5 {
+				--gCols:2;
+				--gOf:5;
+			}
+
+			&--3of5 {
+				--gCols:3;
+				--gOf:5;
+			}
+
+			&--4of5 {
+				--gCols:4;
+				--gOf:5;
+			}
+		}
+	}
+}

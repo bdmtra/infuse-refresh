@@ -1,0 +1,133 @@
+.ui {
+	&-crossbtn {
+		display:flex;
+		align-items:center;
+		justify-content:center;
+		cursor:pointer;
+		width:22px;
+		height:22px;
+	
+		&:before {
+			content:'';
+			display:block;
+			width:100%;
+			height:100%;
+			transition:background .2s;
+
+			mask-image: url("data:image/svg+xml,%3Csvg width='22' height='22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 19.415 7.932 11 0 2.585 2.442 0l10.391 11L2.442 22 0 19.415Z' fill='%23fff'/%3E%3Cpath d='M22 2.585 14.068 11 22 19.415 19.558 22 9.167 11 19.558 0 22 2.585Z' fill='%23fff'/%3E%3C/svg%3E");
+			mask-size: 100% 100%;
+			mask-repeat: no-repeat;
+			background-color: #fff;
+		}
+	}
+}
+
+.popups-overlay {
+	position:fixed;
+	z-index:9999;
+	left:0;
+	top:0;
+	right:0;
+	bottom:0;
+	transition:opacity .2s, visibility .2s;
+
+	body:not(.body--popup-opened) & {
+		opacity:0;
+		visibility:hidden;
+		pointer-events: none;
+	}
+}
+
+.popup {
+	position:fixed;
+	z-index:99999;
+	left:0;
+	top:0;
+	right:0;
+	bottom:0;
+	overflow:hidden;
+	overflow-y:auto;
+	backface-visibility:hidden;
+	scroll-behavior: contain;
+	transition:opacity .2s, visibility .2s;
+	padding:20px;
+	display:flex;
+	background:rgba($color-blue,.9);
+
+	@supports (backdrop-filter:blur()) {
+		backdrop-filter:blur(10px);
+	}
+
+	opacity:0;
+	visibility:hidden;
+	pointer-events: none;
+
+	@media only screen and (max-width: 500px) {
+	
+		padding:0;
+		flex-direction: column;
+	
+	}
+
+	&.active {
+		opacity:1;
+		visibility:visible;
+		pointer-events: all;
+	}
+	
+	&__content {
+		background:#fff;
+		width:100%;
+		margin:auto;
+		position:relative;
+	
+		&--video {
+			padding:0;
+			max-width:800px;
+		}
+
+		@media only screen and (max-width: 500px) {
+		
+			max-width:none;
+			flex-grow:1;
+		
+		}
+	}
+
+	&__close {
+		position:absolute;
+		right:20px;
+		top:20px;
+		z-index:3;
+	}
+	
+	&-head {
+		margin:0 auto 20px auto;
+	
+		&__title {
+			font-size:20px;
+			line-height:24px;
+		}
+		
+		&__subtitle {
+			font-size:16px;
+			line-height:20px;
+			padding-top:15px;
+		}
+	}
+	
+	&__video {
+		width:100%;
+		height:0;
+		padding-bottom:56.25%;
+		position:relative;
+	
+		& iframe {
+			width:100%!important;
+			height:100%!important;
+			position:absolute;
+			left:0;
+			top:0;
+		}
+	}
+}

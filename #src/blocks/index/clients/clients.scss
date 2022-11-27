@@ -1,0 +1,62 @@
+@import '../../../scss/_colors.scss';
+@import '../../../scss/_mixins.scss';
+
+.clients {
+	&__row {
+		display:flex;
+		flex-wrap:wrap;
+	}
+
+	&__item {
+		width:20%;
+		height:145px;
+		display:flex;
+		flex-direction: column;
+		justify-content:center;
+		align-items:center;
+
+		& img {
+			width:auto;
+			height:auto;
+			max-width: 90%;
+			max-height: 90%;
+		}
+	}
+
+	&__more {
+		display:flex;
+		justify-content:center;
+		margin-top:20px;
+	}
+
+	&__btn {
+		width:100%;
+		max-width:160px;
+	}
+}
+
+@media only screen and (max-width: 1279px) {
+
+	.clients {
+		&__item {
+			height:110px;
+
+			& img {
+				max-width:60%;
+				max-height:60%;
+			}
+		}
+	}
+
+}
+
+@media only screen and (max-width: 767px) {
+
+	.clients {
+		&__item {
+			height:60px;
+			width:33.333%;
+		}
+	}
+
+}

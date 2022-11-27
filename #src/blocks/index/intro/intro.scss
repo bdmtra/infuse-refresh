@@ -1,0 +1,322 @@
+@import '../../../scss/_colors.scss';
+@import '../../../scss/_mixins.scss';
+
+.intro {
+	background:$color-blue;
+	padding:0;
+
+	&__top {
+		min-height:660px;
+		position:relative;
+		overflow:hidden;
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+
+		&:after {
+			background: linear-gradient(97.14deg, $color-blue 26.38%, rgba(28, 60, 112, 0.76) 36.37%, rgba(28, 60, 112, 0) 53.63%, rgba(28, 60, 112, 0.17) 80.11%, rgba(28, 60, 112, 0.69) 99.45%);
+			position:absolute;
+			top:0;
+			right:0;
+			bottom:0;
+			width:1770px;
+			content:'';
+		}
+	}
+
+	&__bg {
+		position:absolute;
+		right:0;
+		top:50%;
+		transform:translateY(-50%);
+		height:100%;
+		min-height:663px;
+		width:auto;
+
+		& img {
+			width:auto;
+			max-width:none;
+			height:100%;
+		}
+	}
+
+	&__row {
+		display:flex;
+		align-items:center;
+		justify-content:space-between;
+		position:relative;
+		z-index:1;
+	}
+
+	&__left {
+		flex-grow:1;
+		max-width:800px;
+	}
+	
+	&__text {
+		font-size:30px;
+		line-height:38px;
+		font-weight:800;
+		margin-bottom:33px;
+		color:#fff;
+	}
+	
+	&__ttl {
+		font-size:100px;
+		line-height:100px;
+		text-transform:uppercase;
+		letter-spacing:-.02em;
+		font-weight:900;
+		color:#fff;
+	}
+	
+	&__right {
+		flex-shrink: 0;
+		display:flex;
+		margin-right:100px;
+	}
+
+	&__play {
+		@include noselect;
+		
+		&-icon {
+			margin-bottom:6px;
+			width:136px;
+			height:136px;
+			cursor:pointer;
+			position:relative;
+			display:block;
+
+			& svg {
+				fill:none;
+				position:absolute;
+				left:0;
+				top:0;
+			}
+		}
+		
+		&-r {
+			transition:all .2s;
+		}
+
+		&-text {
+			font-size:16px;
+			line-height:23px;
+			color:#fff;
+			text-align:center;
+			font-weight:700;
+			letter-spacing:.02em;
+			text-transform:uppercase;
+		}
+
+		html.no-touch &-icon:hover & {
+			&-r {
+				transform:scale(.7647);
+			}
+		}
+	}
+
+	&__bot {
+		display:flex;
+	}
+
+	&__item {
+		width:33.333%;
+		position:relative;
+		color:#fff;
+		padding:32px 20px;
+
+		@media only screen and (min-width: 768px) {
+
+			&-inner {
+				max-width:400px;
+				margin:0 auto;
+				padding:0;
+
+				&--1 {
+					max-width:320px;
+				}
+			}
+
+		}
+
+		&-text {
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 23px;
+			letter-spacing: 0.02em;
+			text-transform: uppercase;
+		}
+
+		&--1 {
+			background: linear-gradient(
+				55.71deg,
+				#EE3124 2.64%,
+				#FAAA23 96.14%
+			);
+		}
+
+		&--2 {
+			background: linear-gradient(
+				215.13deg,
+				#3ECEDD -38.87%,
+				#005EAB 79.25%
+			);
+		}
+
+		&--3 {
+			background:$color-blue;
+		}
+	}
+}
+
+@media only screen and (max-width: 2150px) {
+
+	.intro {
+		&__right {
+			margin-right:100px;
+		}
+	}
+	
+}
+
+@media only screen and (max-width: 1770px) {
+
+	.intro {
+		&__top {
+			&:after {
+				width:auto;
+				left:0;
+			}
+		}
+
+		&__bg {
+			left:19%;
+			right:auto;
+		}
+	}
+
+}
+
+@media only screen and (max-width: 1299px) {
+
+	.intro {
+		&__bg {
+			left:-10%;
+		}
+	}
+
+}
+
+@media only screen and (max-width: 1279px) {
+
+	.intro {
+		&__left {
+			max-width:500px;
+		}
+		&__ttl {
+			font-size:70px;
+			line-height:80px;
+		}
+
+		&__right {
+			margin-right:0;
+		}
+	}
+
+}
+
+@media only screen and (max-width: 1000px) {
+
+	.intro {
+		&__bg {
+			left:-30%;
+		}
+	}
+
+}
+
+@media only screen and (max-width: 767px) {
+
+	.intro {
+		&__top {
+			min-height:auto;
+			padding:42px 0 32px;
+		}
+
+		&__bg {
+			min-height:auto;
+			left:auto;
+			right:-1px;
+			top:0;
+			max-width:100%;
+			transform:none;
+			display:flex;
+			justify-content: flex-end;
+
+			& img {
+				transform:translateX(27.6%);
+			}
+		}
+
+		&__row {
+			display:block;
+		}
+	
+		&__left {
+			max-width:300px;
+			margin-bottom:22px;
+		}
+	
+		&__text {
+			font-size:18px;
+			line-height:23px;
+			margin-bottom:23px;
+		}
+	
+		&__ttl {
+			font-size:44px;
+			line-height:52px;
+			margin-bottom:23px;
+		}
+	
+		&__right {
+			display:block;
+		}
+
+		&__play {
+			width:74px;
+
+			&-icon {
+				width:74px;
+				height:74px;
+			}
+		
+			&-text {
+				font-size:9px;
+				line-height:13px;
+			}
+		}
+
+		&__bot {
+			display:block;
+		}
+
+		&__item {
+			width:100%;
+			padding:32px 0;
+		}
+	}
+
+}
+
+@media only screen and (max-width: 400px) {
+
+	.intro {
+		&__ttl {
+			font-size:40px;
+			line-height:46px;
+		}
+	}
+
+}

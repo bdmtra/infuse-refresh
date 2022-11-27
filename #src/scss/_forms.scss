@@ -1,0 +1,117 @@
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+	opacity: 1;
+	text-align: inherit !important;
+	color: inherit !important;
+	transition:opacity .2s;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+	opacity: 1;
+	text-align: inherit !important;
+	color: inherit !important;
+	transition:opacity .2s;
+}
+
+textarea::-webkit-input-placeholder {
+	opacity: 1;
+	text-align: inherit !important;
+	color: inherit !important;
+	transition:opacity .2s;
+}
+
+textarea::-moz-placeholder {
+	opacity: 1;
+	text-align: inherit !important;
+	color: inherit !important;
+	transition:opacity .2s;
+}
+
+label {
+	display: block;
+	position: relative;
+}
+
+input,
+textarea,
+button {
+	border-radius:0;
+}
+
+textarea {
+	resize: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance:none;
+}
+
+input[type='number'] {
+	-moz-appearance:textfield;
+}
+
+:-webkit-autofill,
+:-webkit-autofill:hover, 
+:-webkit-autofill:focus {
+	-webkit-box-shadow:0 0 0 1000px #fff inset!important;
+}
+
+.hs {
+	&-form-field {
+		&:not(:last-child) {
+			margin-bottom:11px;
+		}
+		& label {
+			display:none!important;
+		}
+	}
+
+	&-recaptcha,
+	&_error_rollup {
+		display:none!important;
+	}
+
+	&-input {
+		width:100%;
+		height:48px;
+		padding:10px 20px;
+		background:rgba(#fff,.15);
+		color:#fff;
+		font-size:14px;
+		line-height:22px;
+		font-weight:600;
+		transition:color .2s, border .2s, background .2s;
+
+		&:focus {
+			background:rgba(#fff,.3);
+		}
+
+		&.error {
+			background:rgba(#fff,.6)!important;
+			color:#9A0021!important;
+		}
+	}
+
+	&-form .actions & {
+		&-button {
+			display:block;
+			cursor: pointer;
+			width:auto;
+			height:48px;
+			padding:0 34px;
+			text-align:center;
+			font-family: 'Roboto';
+			font-size:15px;
+			line-height:1;
+			font-weight:500;
+			text-transform: uppercase;
+			color:#fff;
+			background:transparent;
+			border-radius:0;
+			border:transparent solid 1px;
+			transition: border .2s, color .2s, background .2s;
+		}
+	}
+}

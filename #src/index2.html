@@ -1,0 +1,90 @@
+@@include('@@webRoot/template/_head.html',{
+	'pageTitle': '',
+	'pageKeywords': '',
+	'pageDescription': ''
+})
+<link rel="stylesheet" href="@@webRoot/css/index.min.css" />
+</head>
+<body class="body">
+	<div class="app">
+		<!-- Header - start -->
+@@include('@@webRoot/template/_header.html')
+		<!-- Header - start -->
+		<main class="app__content">
+			<!-- Intro - start -->
+			<!-- /blocks/index/intro/ -->
+@@include('@@webRoot/blocks/index/intro/intro.html')
+			<!-- Intro - end -->
+
+			<!-- Reviews - start -->
+			<!-- /blocks/index/reviews/ -->
+@@include('@@webRoot/blocks/index/reviews/reviews.html')
+			<!-- Reviews - end -->
+
+			<!-- KPIs - start -->
+			<!-- /blocks/index/kpi/ -->
+@@include('@@webRoot/blocks/index/kpi/kpi.html')
+			<!-- KPIs - end -->
+
+			<!-- Info - start -->
+			<!-- /blocks/index/info/ -->
+@@include('@@webRoot/blocks/index/info/info.html')
+			<!-- Info - end -->
+
+			<!-- Solutions - start -->
+			<!-- /blocks/index/solutions/ -->
+@@include('@@webRoot/blocks/index/solutions/solutions.html')
+			<!-- Solutions - end -->
+
+			<!-- Insights - start -->
+			<!-- /blocks/index/insights/ -->
+@@include('@@webRoot/blocks/index/insights/insights.html')
+			<!-- Insights - end -->
+
+			<!-- Features - start -->
+			<!-- /blocks/index/features/ -->
+@@include('@@webRoot/blocks/index/features/features.html')
+			<!-- Features - end -->
+
+			<!-- Makers - start -->
+			<!-- /blocks/index/makers/ -->
+@@include('@@webRoot/blocks/index/makers/makers.html')
+			<!-- Makers - end -->
+
+			<!-- Clients - start -->
+			<!-- /blocks/index/clients/ -->
+@@include('@@webRoot/blocks/index/clients/clients.html')
+			<!-- Clients - end -->
+		</main>
+		<!-- Footer - start -->
+@@include('@@webRoot/template/_footer.html')
+		<!-- Footer - end -->
+	</div>
+@@include('@@webRoot/template/_popups.html')
+	<!-- Popups - start -->
+	<!-- /blocks/index/popups/ -->
+@@include('@@webRoot/blocks/index/popups/popups.html')
+	<!-- Popups - end -->
+	<script src="@@webRoot/blocks/libs/swiper/swiper.min.js"></script>
+@@include('@@webRoot/template/_foot.html')
+	<script src="@@webRoot/blocks/index/insights/insights.min.js"></script>
+	<script>
+		app.pageInit = () => {
+			// Insights
+			$('.insights').each(function () {
+				if ($(this).data('.insightsInit') !== true) {
+					app.insights($(this));
+				}
+			});
+
+			/*// Inc. 5000 popup
+			setTimeout(function() {
+				app.popups.open('inc5000');
+			},5000);*/
+		}
+		(function () {
+			app.pageInit();
+		})(jQuery);
+	</script>
+</body>
+</html>

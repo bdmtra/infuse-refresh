@@ -1,0 +1,9 @@
+@import '../../../scss/_colors.scss';
+@import '../../../scss/_mixins.scss';
+
+.info {
+	&__subtext {
+		max-width:1140px;
+		margin:0 auto;
+	}
+}

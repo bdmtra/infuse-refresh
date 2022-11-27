@@ -1,0 +1,14 @@
+:root {
+	--inW: 1466px;
+
+	--inP: 20px;
+
+	--inP2: calc(var(--inP) / 2);
+
+	--inM: calc(var(--inP2) * -1);
+
+	--headH:94px;
+	--headH_s:55px;
+	--menuH:var(--headH);
+	--locH:44px;
+}
