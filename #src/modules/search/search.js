@@ -1,5 +1,6 @@
 app.search = {
-	init() {
+	// ошибка что ASP не определен, все скрипты которые относятся к поиску идут до app https://i.imgur.com/OuhVpQF.png
+	/*init() {
 		let _this = this;
 		$(".insights-filters .searchsettings").appendTo(".insights-filters .search-filter-options-inner");
 
@@ -80,5 +81,5 @@ app.search = {
 				mainSearchSettings.appendTo("#ajaxsearchprores2_1");
 			}
 		}
-	}
+	}*/
 }
